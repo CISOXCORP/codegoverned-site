@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purchase confirmed — CodeGoverned</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEDE8;--paper-raised:#F6F5F1;--ink:#1B2430;--ink-soft:#4A5568;
+    --ink-faint:#7A8591;--line:#C7CDD1;--line-strong:#9BA5AC;
+    --accent:#C98A2C;--accent-ink:#7A5119;--pass:#3C6E52;--radius:2px;--max:720px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;}
+  h1,h2{font-family:'Space Grotesk',sans-serif;font-weight:600;line-height:1.15;
+    margin:0 0 .5em;letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .titleblock{border-bottom:1px solid var(--line-strong);background:var(--paper-raised);}
+  .titleblock-inner{max-width:var(--max);margin:0 auto;padding:14px 24px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);
+    letter-spacing:.02em;}
+  .titleblock-inner b{color:var(--ink);}
+  header{padding:64px 0 40px;}
+  .status{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--pass);margin-bottom:18px;
+  }
+  .status::before{content:"";width:9px;height:9px;border-radius:50%;
+    background:var(--pass);box-shadow:0 0 0 3px rgba(60,110,82,.18);}
+  h1{font-size:clamp(1.7rem,4vw,2.4rem);}
+  header p{color:var(--ink-soft);max-width:52ch;}
+  .next{padding:8px 0 56px;}
+  .next h2{font-size:1.25rem;margin-bottom:22px;}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:16px;
+    padding:20px 0;border-top:1px solid var(--line);}
+  .step:last-of-type{border-bottom:1px solid var(--line);}
+  .step .dot{width:28px;height:28px;border-radius:50%;background:var(--paper-raised);
+    border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;}
+  .step h3{font-family:'IBM Plex Sans',sans-serif;font-size:1.02rem;font-weight:600;margin:0 0 6px;}
+  .step p{margin:0;color:var(--ink-soft);font-size:.95rem;}
+  .step .clock{display:inline-block;margin-top:8px;font-family:'IBM Plex Mono',monospace;
+    font-size:.8rem;color:var(--accent-ink);background:rgba(201,138,44,.10);
+    padding:4px 9px;border-radius:var(--radius);}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;
+    font-size:.95rem;font-weight:600;border-radius:var(--radius);
+    text-decoration:none;background:var(--ink);color:var(--paper);
+    margin-top:14px;transition:background .15s ease;}
+  .btn:hover{background:#2b3648;}
+  .support{background:var(--paper-raised);border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);padding:28px 0;}
+  .support p{margin:0;color:var(--ink-soft);font-size:.93rem;max-width:60ch;}
+  .support b{color:var(--ink);}
+  footer{padding:28px 0 44px;}
+  .footer-inner{font-family:'IBM Plex Mono',monospace;font-size:12px;
+    color:var(--ink-faint);border-top:1px solid var(--line);padding-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="titleblock">
+  <div class="titleblock-inner">DOC <b>AI-READINESS-ASSESSMENT</b> / STATUS <b>PURCHASE CONFIRMED</b></div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="status">Payment received</div>
+    <h1>Confirmed. Your assessment starts with the intake.</h1>
+    <p>A receipt is on its way from Stripe to the email you used at checkout.
+    Everything from here is async — no calls, no meetings, exactly as promised.</p>
+  </div>
+</header>
+
+<section class="next">
+  <div class="wrap">
+    <h2>What happens next</h2>
+    <div class="step">
+      <div class="dot mono">1</div>
+      <div>
+        <h3>Complete the intake questionnaire — about 15 minutes</h3>
+        <p>Team context, tooling, and your CI/workflow configs (paste or upload).
+        Read-only repo access is offered inside the intake and is entirely
+        optional — the questionnaire tier alone produces a complete report.</p>
+        <a class="btn" href="#INTAKE-FORM-LINK">Start the intake</a>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot mono">2</div>
+      <div>
+        <h3>Analysis runs</h3>
+        <p>Your materials are assessed against the governance rubric — validation
+        coverage, review-gate integrity, autonomy readiness, guardrail gaps —
+        with adversarial review and expert human sign-off before release.</p>
+        <span class="clock">DELIVERY CLOCK STARTS AT COMPLETED INTAKE</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot mono">3</div>
+      <div>
+        <h3>Delivery to your inbox</h3>
+        <p>Report, tailored playbook, and guardrail templates — within
+        <b>5 business days of completed intake</b>. Follow-up questions answered
+        by email within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="support">
+  <div class="wrap">
+    <p><b>Questions before you start?</b> Write to
+    <span class="mono">support@codegoverned.com</span>. Analysis is confined to
+    the materials you provide; nothing is retained beyond delivery. Full refund
+    within 7 days of delivery if the report contains no actionable finding.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-inner">
+    CISOX, LLC · 3916 N. Potsdam Ave, Suite 221 · Sioux Falls, SD 57104
+  </div>
+</footer>
+
+</body>
+</html>
